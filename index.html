@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>吉云工具箱 | 极简导航</title>
+    <meta name="description" content="吉云工具箱是一个极简的导航网站，提供了一些常用的工具和网站，方便大家使用。" />
+    <meta name="keywords" content="吉云工具箱,极简导航,工具网站,导航网站,Ai工具,在线工具,Ai导航,Ai导航网站,Ai工具网站" />
+    <meta name="author" content="吉云工具箱" />
+    <meta name="robots" content="all" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        .first-loading-wrap {
+          display: flex;
+          width: 100%;
+          height: 100vh;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .first-loading-wrap > h1 {
+          font-size: 128px;
+        }
+
+        .first-loading-wrap .loading-wrap {
+          padding: 98px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .dot {
+          animation: antRotate 1.2s infinite linear;
+          transform: rotate(45deg);
+          position: relative;
+          display: inline-block;
+          font-size: 32px;
+          width: 32px;
+          height: 32px;
+          box-sizing: border-box;
+        }
+
+        .dot i {
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          display: block;
+          background-color: #1890ff;
+          border-radius: 100%;
+          transform: scale(0.75);
+          transform-origin: 50% 50%;
+          opacity: 0.3;
+          animation: antSpinMove 1s infinite linear alternate;
+        }
+
+        .dot i:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+
+        .dot i:nth-child(2) {
+          top: 0;
+          right: 0;
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+
+        .dot i:nth-child(3) {
+          right: 0;
+          bottom: 0;
+          -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+        }
+
+        .dot i:nth-child(4) {
+          bottom: 0;
+          left: 0;
+          -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+        }
+
+        @keyframes antRotate {
+          to {
+            -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+          }
+        }
+
+        @-webkit-keyframes antRotate {
+          to {
+            -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+          }
+        }
+
+        @keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+
+        @-webkit-keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+      </style>
+      <div class="first-loading-wrap">
+        <div class="loading-wrap">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
