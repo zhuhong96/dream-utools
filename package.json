@@ -3,6 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "author": "雾恋 <zhuhong317626@163.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "vite --mode development",
     "build": "vite build --mode production",
